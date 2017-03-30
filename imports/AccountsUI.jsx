@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { Blaze } from 'meteor/blaze'
 import { Template } from 'meteor/templating';
 
-//import Blaze from 'meteor/gadicc:blaze-react-component';
 
 export default class AccountsUI extends Component
 {
@@ -12,6 +11,7 @@ export default class AccountsUI extends Component
 		this.view=Blaze.render(Template.loginButtons,
 			ReactDOM.findDOMNode(this.refs.container));
 	}
+
 
 	componentWillUnmount() {
 		Blaze.remove(this.view);

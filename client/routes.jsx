@@ -4,6 +4,7 @@ import {MainLayout} from './layouts/MainLayout';
 import ImagenesWrapper from '../imports/imagenes/ImagenesWrapper';
 import ImageForm from '../imports/imagenes/ImageForm';
 import ImagenesPersonal from '../imports/imagenes/ImagenesPersonal';
+
 FlowRouter.route('/',{
 	action()
 	{

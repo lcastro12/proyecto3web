@@ -25,7 +25,7 @@ export default class Buscador extends Component{
 			<form className="Buscador" id="FormBuscar"onSubmit={this.addSearch.bind(this)}>
 			<input type="text" 
 				   ref="filtroImagenes"
-				   placeholder="Palabra clave a buscar"/>
+				   defaultValue="20"/>
 			<button type="submit"  value="Submit">Buscar</button>
 			</form>
 
