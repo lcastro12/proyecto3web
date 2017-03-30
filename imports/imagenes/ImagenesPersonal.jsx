@@ -12,10 +12,10 @@ export default class ImagenesPersonal extends TrackerReact(Component){
 		this.state=
 		{
 			filters:{},
-			count:20,
+			count:36,
 			query:"",
 			subscription:{
-				imagenes:Meteor.subscribe("myImages",{},{sort:{votos:-1},limit: 20})
+				imagenes:Meteor.subscribe("myImages",{},{sort:{votos:-1},limit: 36})
 			}
 		}
 
@@ -55,23 +55,34 @@ export default class ImagenesPersonal extends TrackerReact(Component){
 
 	render()
 	{
-		return(
-		<div>
+
+		 	return(
+
+		 		<div>
 		<h3> Mis imágenes</h3>
 
-			<form className="Buscador" id="FormBuscar"onSubmit={this.addSearch.bind(this)}>
+			<form className="Buscador centerImages" id="FormBuscar"onSubmit={this.addSearch.bind(this)}>
+			<div className="form-group form-inline">
+			<label htmlFor="barrBus">Criterio a buscar</label>
 			<input type="text"
+				   id="barrBus"
 				   ref="filtroImagenes"
+				   className="form-control"
 				   placeholder="Palabra clave a buscar"/>
+
+			<label htmlFor="nymber">Número de imagenes</label>
 			<input type="number"
 				   ref="numeroImagenes"
+				   id="nymber"
 				   min="1"
 				   max="100"
 				   required="required"
 				   id="numeroImagenes"
+				   default={this.state.cant}
 				   value={this.state.cant}
 				   />
-			<button type="submit"  value="Submit">Buscar</button>
+			<button type="submit"  value="Submit" className="btn btn-default">Buscar</button>
+			</div>
 			</form>
 
 		{this.imagenes().map((imagen)=>{
@@ -80,6 +91,7 @@ export default class ImagenesPersonal extends TrackerReact(Component){
 
 
 			)
+
 
 	}
 }

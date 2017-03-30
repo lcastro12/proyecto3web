@@ -22,7 +22,7 @@ export default class Buscador extends Component{
 	{
 		return(
 
-			<form className="Buscador" id="FormBuscar"onSubmit={this.addSearch.bind(this)}>
+			<form className="Buscador centerImages" id="FormBuscar"onSubmit={this.addSearch.bind(this)}>
 			<input type="text" 
 				   ref="filtroImagenes"
 				   defaultValue="20"/>

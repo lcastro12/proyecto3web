@@ -27,18 +27,30 @@ export default class ImageForm extends Component{
 	render(){
 		return(
 			<form className="new-image" onSubmit={this.addImage.bind(this)}>
+			 <div className="form-group">
+			 <label htmlFor="text">Titulo de la imagen</label>
 			<input type="text"
 				   ref="imTitle"
+				   id="text"
 				   required="required"
-				   placeholder="Titulo de la imágen"/>
+				   className="form-control"
+				   placeholder="Perro"/>
+			<label htmlFor="imagenUrl">Url de la imagen a subir</label>
 				<input type="text"
 				   ref="imgUrl"
+				   className="form-control"
+				   id="imagenUrl"
 				   required="required"
-				   placeholder="Url de la imagen"/>
+				   placeholder="google.com/img3.png"/>
+			<label htmlFor="imagenUrl">Descripción de la imagen</label>
 				<input type="text"
 				   ref="imSnippet"
-				   placeholder="Descripción de la imágen"/>
-				<button type="submit"  value="Submit">Subir</button>
+				   id="imagenUrl"
+				   className="form-control"
+				   default="una imagen"
+				   placeholder="Perro bonito"/>
+				<button type="submit"  value="Submit" className="btn btn-default">Subir</button>
+				</div>
 			</form>
 			)
 	}

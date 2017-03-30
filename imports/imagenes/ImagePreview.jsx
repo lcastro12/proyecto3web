@@ -12,6 +12,15 @@ export default class ImagePreview extends Component {
 	{
 		Meteor.call('likeImage',this.props.imagen,false);
 	}
+    componentWillReceiveProps(nextProps) 
+  {
+    if(this.props.imagen._id!=nextProps.imagen._id)
+    {
+      console.log("CAMBIO")
+    }
+
+    
+  }
 
   render() {
     return (

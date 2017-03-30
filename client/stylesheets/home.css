@@ -1,11 +1,12 @@
 body{
 	margin:0;
 	padding:0;
+	background-color: #000080;
 }
 
 
 header{
-  background-color: #000080;
+  background-color: black;
 }
 
 input{
@@ -21,6 +22,24 @@ a{
 	float:left;
 }
 
+.login-link-text, .login-link-text a:link, .login-link-text a:visited
+{
+	color:white !important;
+
+}
+
+.new-image
+{
+	padding-right:100px;
+	padding-left:100px;
+}
+
+.CotainerF
+{
+	padding-left:100px ;
+	padding-right:100px;
+}
+
 .botonesImagen{
 	position: relative;
 	top:0;
@@ -32,14 +51,16 @@ img{
   width:150px;
   object-fit:cover;
   z-index:-1;
-  overflow: hidden;
-	position:relative;
-	left:0;
-	top:0;
 }
 
 img:hover{
-	z-index:0;
+		-moz-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5);
+	 z-index: 10;
+	 position: relative;
 }
 
 .imageResult { 
@@ -51,11 +72,11 @@ img:hover{
 	transition: all .3s ease-out;
 } 
 .imageResult:hover {
-	-moz-transform: scale(2);
-	-webkit-transform: scale(2);
-	-o-transform: scale(2);
-	-ms-transform: scale(2);
-	transform: scale(2);
+	-moz-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5);
 	 z-index: 10;
 	 position: relative;
 } 
