@@ -2,8 +2,6 @@
   "name": "imagenes",
   "private": false,
   "scripts": {
-	"heroku-prebuild": "npm install",
-	"heroku-postbuild": "",
     "start": "meteor run"
   },
   "dependencies": {
