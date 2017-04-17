@@ -46,7 +46,7 @@ export default class ImagenesPersonal extends TrackerReact(Component){
 	    this.setState({query:bus});
 	    this.state.subscription.imagenes.stop();
 	    this.setState({subscription:{
-	    		imagenes:Meteor.subscribe("myImages",bus,{sort:{votos:-1}})
+	    		imagenes:Meteor.subscribe("myImages",bus,{sort:{votos:-1},limit: cant})
 	    	}});
 
 	}

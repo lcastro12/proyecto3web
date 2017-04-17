@@ -6,11 +6,11 @@ export default class ImagePreview extends Component {
 	votarPositivo(events)
 	{
 		console.log("Vota positivo")
-		Meteor.call('likeImage',this.props.imagen,true);
+		Meteor.call('likeImage',{identi:this.props.imagen._id,liked:true});
 	}
 	votarNegativo(events)
 	{
-		Meteor.call('likeImage',this.props.imagen,false);
+		Meteor.call('likeImage',{identi:this.props.imagen._id,liked:false});
 	}
     componentWillReceiveProps(nextProps) 
   {

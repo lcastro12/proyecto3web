@@ -26,4 +26,7 @@ accounts-password
 gadicc:blaze-react-component
 react-meteor-data
 themeteorchef:bert
+mdg:validated-method
+aldeed:simple-schema
 
+ddp-rate-limiter

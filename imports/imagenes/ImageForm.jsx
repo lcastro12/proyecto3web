@@ -7,14 +7,20 @@ export default class ImageForm extends Component{
 		var title=this.refs.imTitle.value.trim();
 		var url=this.refs.imgUrl.value.trim();
 		var snippet=this.refs.imSnippet.value.trim();
-		Meteor.call('addImagen',url,snippet,title,(error,data)=>{
-			if(error)
+		Meteor.call('addImagen',{url:url,snippet:snippet,title:title},(error,data)=>{
+			if(error.error==='not-authenticated')
 			{
 			Bert.alert( 'Por favor inicie sesión para subir imágenes', 'danger', 'fixed-top', 'fa-frown-o' );
 			Session.set("Meteor.loginButtons.dropdownVisible", true);
+			
+			}
+			else if(error.error==='not-url')
+			{
+				Bert.alert( 'La URL de la imágen a subir no es valida', 'danger', 'fixed-top', 'fa-frown-o' );
 			}
 			else
 			{
+
 			Bert.alert( 'La imágen se ha subido correctamente', 'success', 'fixed-top', 'fa-check' );
 
 			}
