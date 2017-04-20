@@ -88,3 +88,5 @@ export default class ImagenesWrapper extends TrackerReact(Component){
 
 	}
 }
+
+//Aquí podrían verificar que el input que les entra, para Criterio a buscar, sea del tipo que ustedes esperan, que no vaya a ser int o algo que no funcione. 
