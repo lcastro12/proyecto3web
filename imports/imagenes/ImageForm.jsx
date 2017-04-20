@@ -61,3 +61,5 @@ export default class ImageForm extends Component{
 			)
 	}
 }
+// Recuerden hacer pruebas, acá podrían probar si se agrega correctamente una imagen
+// Muy chevere que garanticen seguridad al asegurar que sea un usuario que se encuentre regitrado. 
